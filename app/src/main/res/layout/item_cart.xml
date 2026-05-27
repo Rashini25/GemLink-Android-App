@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_miner_item"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- ✅ iv_cart_gem_image -->
+    <ImageView
+        android:id="@+id/iv_cart_gem_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Name + Price + Date + Button -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- ✅ tv_cart_gem_name -->
+        <TextView
+            android:id="@+id/tv_cart_gem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- ✅ tv_cart_gem_price -->
+        <TextView
+            android:id="@+id/tv_cart_gem_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F5C518"
+            android:textSize="14sp"
+            android:paddingTop="2dp" />
+
+        <!-- ✅ tv_cart_date -->
+        <TextView
+            android:id="@+id/tv_cart_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:paddingTop="2dp" />
+
+        <!-- ✅ btn_more_details -->
+        <TextView
+            android:id="@+id/btn_more_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Details"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_message_received"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="6dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- ✅ iv_cart_delete -->
+    <ImageView
+        android:id="@+id/iv_cart_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>

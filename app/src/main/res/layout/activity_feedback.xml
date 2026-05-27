@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback">
+
+    <!-- Background -->
+    <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bd" />
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/iv_back_feedback"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fff" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_feedback_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back_feedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_back_feedback" />
+
+    <!-- Average Rating Number -->
+    <TextView
+        android:id="@+id/tv_avg_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.9"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back_feedback" />
+
+    <!-- Out of 5 label -->
+    <TextView
+        android:id="@+id/tv_out_of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Out of 5"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_avg_rating"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_avg_rating"
+        app:layout_constraintTop_toTopOf="@+id/tv_avg_rating" />
+
+    <!-- Overall Star RatingBar -->
+    <RatingBar
+        android:id="@+id/rb_overall"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4.9"
+        android:stepSize="0.1"
+        android:progressTint="#F5C518"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_avg_rating" />
+
+    <!-- Total Ratings -->
+    <TextView
+        android:id="@+id/tv_total_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="324 Ratings"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/rb_overall"
+        app:layout_constraintTop_toBottomOf="@+id/rb_overall" />
+
+    <!-- Rating Breakdown Bars (1★ to 5★) -->
+    <LinearLayout
+        android:id="@+id/ll_rating_bars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_avg_rating">
+
+        <!-- 1 Star Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="3dp">
+            <TextView android:layout_width="16dp" android:layout_height="wrap_content"
+                android:text="1" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_star" android:layout_marginStart="2dp"/>
+            <ProgressBar android:id="@+id/pb_1star"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="10dp"
+                android:layout_weight="1" android:layout_marginHorizontal="8dp"
+                android:max="100" android:progress="87"
+                android:progressTint="#F5C518"/>
+            <TextView android:id="@+id/tv_1star_pct"
+                android:layout_width="40dp" android:layout_height="wrap_content"
+                android:text="87%" android:textColor="#FFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- 2 Star Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="3dp">
+            <TextView android:layout_width="16dp" android:layout_height="wrap_content"
+                android:text="2" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_star" android:layout_marginStart="2dp"/>
+            <ProgressBar android:id="@+id/pb_2star"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="10dp"
+                android:layout_weight="1" android:layout_marginHorizontal="8dp"
+                android:max="100" android:progress="67"
+                android:progressTint="#F5C518"/>
+            <TextView android:id="@+id/tv_2star_pct"
+                android:layout_width="40dp" android:layout_height="wrap_content"
+                android:text="67%" android:textColor="#FFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- 3 Star Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="3dp">
+            <TextView android:layout_width="16dp" android:layout_height="wrap_content"
+                android:text="3" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_star" android:layout_marginStart="2dp"/>
+            <ProgressBar android:id="@+id/pb_3star"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="10dp"
+                android:layout_weight="1" android:layout_marginHorizontal="8dp"
+                android:max="100" android:progress="20"
+                android:progressTint="#F5C518"/>
+            <TextView android:id="@+id/tv_3star_pct"
+                android:layout_width="40dp" android:layout_height="wrap_content"
+                android:text="20%" android:textColor="#FFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- 4 Star Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="3dp">
+            <TextView android:layout_width="16dp" android:layout_height="wrap_content"
+                android:text="4" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_star" android:layout_marginStart="2dp"/>
+            <ProgressBar android:id="@+id/pb_4star"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="10dp"
+                android:layout_weight="1" android:layout_marginHorizontal="8dp"
+                android:max="100" android:progress="15"
+                android:progressTint="#F5C518"/>
+            <TextView android:id="@+id/tv_4star_pct"
+                android:layout_width="40dp" android:layout_height="wrap_content"
+                android:text="15%" android:textColor="#FFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- 5 Star Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="3dp">
+            <TextView android:layout_width="16dp" android:layout_height="wrap_content"
+                android:text="5" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_star" android:layout_marginStart="2dp"/>
+            <ProgressBar android:id="@+id/pb_5star"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="10dp"
+                android:layout_weight="1" android:layout_marginHorizontal="8dp"
+                android:max="100" android:progress="10"
+                android:progressTint="#F5C518"/>
+            <TextView android:id="@+id/tv_5star_pct"
+                android:layout_width="40dp" android:layout_height="wrap_content"
+                android:text="10%" android:textColor="#FFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Reviews RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_feedback"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_rating_bars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Listing">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- ✅ Background fixed -->
+        <ImageView
+            android:id="@+id/imageView109"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bd" />
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/iv_back_listing"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/fff" />
+
+        <!-- Publish Button -->
+        <TextView
+            android:id="@+id/textView106"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Publish"
+            android:textColor="#F5C518"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Add Photo Circle -->
+        <ImageView
+            android:id="@+id/imageView100"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circle_add_photo_bg"
+            android:padding="20dp"
+            android:src="@drawable/ic_add_photo"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back_listing" />
+
+        <!-- Add Photos Label -->
+        <TextView
+            android:id="@+id/textView105"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Add Photos"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView100" />
+
+        <!-- Photo count hint -->
+        <TextView
+            android:id="@+id/tv_photo_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="6dp"
+            android:text="photos 0/10  Choose your listing's main photo first"
+            android:textColor="#AAAAAA"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+        <!-- Gem Name -->
+        <EditText
+            android:id="@+id/editTextText20"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:hint="Gem name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:inputType="textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_photo_hint" />
+
+        <!-- Gem Type -->
+        <EditText
+            android:id="@+id/editTextText21"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:hint="Gem Type"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText20" />
+
+        <!-- Optional label for Gem Type -->
+        <TextView
+            android:id="@+id/tv_optional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:text="Optional"
+            android:textColor="#AAAAAA"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextText21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextText21" />
+
+        <!-- Quantity Row -->
+        <EditText
+            android:id="@+id/editTextText22"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:hint="Quantity"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText21" />
+
+        <!-- Quantity + button -->
+        <TextView
+            android:id="@+id/tv_qty_plus"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextText22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextText22" />
+
+        <!-- Quantity - button -->
+        <TextView
+            android:id="@+id/tv_qty_minus"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextText22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextText22" />
+
+        <!-- Weight -->
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:hint="Weight"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText22" />
+
+        <!-- Price -->
+        <EditText
+            android:id="@+id/editTextText23"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:hint="price    If you exceed LKR 500000 you have to pay"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
+
+        <!-- LKR label on price -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LKR"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextText23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextText23" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/editTextText24"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:hint="Location"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText23" />
+
+        <!-- Info Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_info_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#0D1B3E"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText24">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Add your gemstone to the marketplace by filling in the details below. Upload clear images,\n\nenter accurate information such as gem type, weight, price, and origin, and showcase your gem to interested buyers. A complete and detailed listing helps attract more views and build buyer trust.\n\nOnce submitted, your gem will be visible to buyers and ready for sale."
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "940135123393",
+    "project_id": "gemlink-c15fc",
+    "storage_bucket": "gemlink-c15fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940135123393:android:c5d50e5cf91ea0e033c740",
+        "android_client_info": {
+          "package_name": "com.example.gemlink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGnuPEoY5cXnVOYD1POtINH2Z_YR6v338"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
