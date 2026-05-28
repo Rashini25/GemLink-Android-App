@@ -95,8 +95,8 @@ GemLink/
 ---
 
 ## Developers
-- Student 1 – ITBIN-2312-0020
-- Student 2 – ITBIN-2312-0021
+- U.K.R.R.P.Ayuwardhana – ITBIN-2312-0020
+- W.H.C.D.J.Karunanayaka – ITBIN-2312-0021
 
 ---
 
